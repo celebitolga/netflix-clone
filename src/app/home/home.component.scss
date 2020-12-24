@@ -1,5 +1,5 @@
 $redcolor: #e50914;
-
+///HEADER
 .Header {
   border-bottom: 8px solid #222;
 
@@ -77,6 +77,7 @@ $redcolor: #e50914;
         }
 
         &-lock{
+          position: relative;
          font-size: 1.625rem;
          font-weight: 400;
          height: 100%;
@@ -87,17 +88,32 @@ $redcolor: #e50914;
            height: 60px;
            min-width: 500px;
            width: 100%;
+           padding-left: 10px;
            outline: none;
            border: none;
            border-bottom-left-radius: 2px;
            border-top-left-radius: 2px;
+           font-size: 1.3rem;
 
-           &::placeholder {
-             font-size: 1rem;
+           &:focus + label {
+            font-size: 13px;
+            font-weight: 500;
+            top: 12px;
            }
          }
 
+         &-label {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: #8c8c8c;
+            transition: .2s;
+         }
+
          &-button {
+           position: relative;
            padding-left: 30px;
            padding-right: 30px;
            min-height: 60px;
@@ -121,14 +137,84 @@ $redcolor: #e50914;
            &:hover {
              background-color: #f40612;
            }
+
+           &-arrow {
+             position: absolute;
+             right: 8px;
+             top: 50%;
+             width: 15px;
+            transform: translateY(-50%);
+             path {
+               fill: white;
+             }
+           }
          }
         }
       }
     }
   }
-
 }
 
 
 
+/// SectionTV
 
+.Sectiontv {
+  border-bottom: 8px solid #222;
+  &-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 45px;
+    margin-bottom: .5rem;
+  }
+
+  &-text {
+    width: 52%;
+    margin: -5% 0;
+    padding: 0 3rem 0 0;
+    color: white;
+
+    &-title {
+      font-size: 3.125rem;
+      line-height: 110%;
+      margin-bottom: .5rem;
+    }
+
+    &-subtitle {
+      font-size: 1.625rem;
+      font-weight: 400;
+      margin: .75em 0 .25em;
+    }
+  }
+
+  &-tv {
+    position: relative;
+
+    &-background {
+      position: relative;
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 0;
+        width: 100%;
+        z-index: 2;
+      }
+      &-video {
+        width: 100%;
+        height: 100%;
+        max-width: 73%;
+        max-height: 54%;
+        position: absolute;
+        top: 47.2%;
+        left: 49.6%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+      }
+    }
+  }
+}
