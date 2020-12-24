@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+$redcolor: #e50914;
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: black;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-red {
+  background-color: $redcolor;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  border-radius: 3px;
+}
+
+.text-white {
+  color: white;
+}
