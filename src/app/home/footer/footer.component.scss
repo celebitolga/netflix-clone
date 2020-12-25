@@ -32,4 +32,54 @@
       }
     }
   }
+
+  &-select {
+    position: relative;
+
+    select {
+      background-color: black;
+      color: #999;
+      width: 122px;
+      margin: 1px;
+      padding: 12px 26px 12px 40px;
+      border: none;
+      font-size: 20px;
+      -webkit-appearance: none;
+      appearance: none;
+      border: 1px solid #333;
+      font-size: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      width: 14px;
+      height: 14px;
+      background: url(../../../assets/img/global.png) no-repeat center center / cover;
+      pointer-events: none;
+      transform: translateY(-50%);
+    }
+
+    .select-arrow {
+      position: absolute;
+      left: 103px;
+      top: 52%;
+      transform: translateY(-50%);
+      svg {
+        width: 12px;
+        height: 12px;
+
+        path {
+          fill: #999;
+        }
+      }
+    }
+  }
+
+  &-auther {
+    font-size: 13px;
+    margin-top: 24px;
+  }
 }
