@@ -1,0 +1,58 @@
+<section class="Sectionfaq">
+  <div class="Sectionfaq-container">
+
+    <div class="Sectionfaq-title">
+      <h1 class="Sectionfaq-title-text text-white">
+        Sıkça Sorulan Sorular
+      </h1>
+    </div>
+
+    <div class="Sectionfaq-cards" >
+      <div class="Sectionfaq-cards-item" *ngFor="let faq of faqs">
+        <div class="item">
+          <button class="item-title" (click)="show($event)">
+            <h1 class="title text-white">
+              {{faq.title}}
+            </h1>
+            <span class="item-arrow">
+              <svg viewBox="0 0 26 26" class="svg-icon svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+            </span>
+          </button>
+          <div class="item-content">
+            <span class="item-content-p1 text-white">
+              {{faq.description1}}
+            </span>
+            <span class="item-content-p1 text-white" *ngIf="faq.description2">
+              {{faq.description2}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="content-form">
+      <h3 class="content-form-title text-white">
+        İzlemeye hazır mısınız? Üyelik oluşturmak veya üyeliğinize erişmek için e‑posta adresinizi girin.
+      </h3>
+      <div class="content-form-lock">
+        <input id="email" class="content-form-lock-input" type="email">
+        <label for="email" class="content-form-lock-label">E-posta adresi</label>
+        <button class="content-form-lock-button button-red">
+          <span class="content-form-lock-button-text">İZLEMEYE BAŞLA</span>
+          <span class="content-form-lock-button-arrow">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+              <g>
+                <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+                  c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+                  c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+                  c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</section>

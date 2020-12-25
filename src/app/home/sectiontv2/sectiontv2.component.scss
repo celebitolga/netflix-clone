@@ -1,0 +1,72 @@
+/// SectionTV2
+
+.Sectiontv2 {
+  border-bottom: 8px solid #222;
+
+  &-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+    margin-bottom: .5rem;
+  }
+
+  &-text {
+    width: 52%;
+    margin: -5% 0;
+    padding: 0 3rem 0 0;
+    color: white;
+
+    &-title {
+      font-size: 3.125rem;
+      line-height: 110%;
+      margin-bottom: .5rem;
+    }
+
+    &-subtitle {
+      font-size: 1.625rem;
+      font-weight: 400;
+      margin: .75em 0 .25em;
+    }
+  }
+
+  &-tv {
+    position: relative;
+
+    &-background {
+      position: relative;
+      img {
+        height: auto;
+        border: 0;
+        width: 100%;
+        z-index: 2;
+      }
+      &-video {
+        width: 100%;
+        height: 100%;
+        max-width: 73%;
+        max-height: 54%;
+        position: absolute;
+        top: 47.2%;
+        left: 49.6%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+      }
+      &-video2 {
+        width: 100%;
+        height: 100%;
+        max-width: 63%;
+        max-height: 47%;
+        position: absolute;
+        top: 34%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+      }
+    }
+  }
+}

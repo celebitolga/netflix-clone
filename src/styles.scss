@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 $redcolor: #e50914;
-
+$graycolor: #757575;
+*{
+  box-sizing: border-box;
+}
 html, body {
   height: 100%;
 }
@@ -31,4 +34,99 @@ a {
 
 .text-white {
   color: white;
+}
+
+.text-gray {
+  color: $graycolor;
+}
+
+.content-form {
+  padding-top: .85rem;
+  max-width: 950px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 21.5px;
+
+  &-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+
+  &-lock{
+    position: relative;
+   font-size: 1.625rem;
+   font-weight: 400;
+   height: 100%;
+   display: flex;
+
+   &-input {
+     font-size: 1.625rem;
+     height: 60px;
+     min-width: 500px;
+     width: 100%;
+     padding-left: 10px;
+     outline: none;
+     border: none;
+     border-bottom-left-radius: 2px;
+     border-top-left-radius: 2px;
+     font-size: 1.3rem;
+
+     &:focus + label {
+      font-size: 13px;
+      font-weight: 500;
+      top: 12px;
+     }
+   }
+
+   &-label {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: #8c8c8c;
+      transition: .2s;
+   }
+
+   &-button {
+     position: relative;
+     padding-left: 30px;
+     padding-right: 30px;
+     min-height: 60px;
+     min-width: 74px;
+     width: 100%;
+     border: none;
+     outline: none;
+     border-top-left-radius: 0;
+     border-bottom-left-radius: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     &-text {
+       font-size: 1.875rem;
+       padding: .5rem 0;
+       float: 1 1 auto;
+       text-align: center;
+     }
+
+     &:hover {
+       background-color: #f40612;
+     }
+
+     &-arrow {
+       position: absolute;
+       right: 8px;
+       top: 50%;
+       width: 15px;
+      transform: translateY(-50%);
+       path {
+         fill: white;
+       }
+     }
+   }
+  }
 }
