@@ -29,6 +29,7 @@ a {
   font-size: 1rem;
   font-weight: 400;
   color: white;
+  border: none;
   border-radius: 3px;
 }
 
@@ -36,8 +37,45 @@ a {
   color: white;
 }
 
+.text-blue {
+  color: #0071eb;
+}
+
+.text-underline:hover {
+  text-decoration: underline;
+}
+.input-label-selected {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: text;
+  font-size: 13px;
+  font-weight: 500;
+  top: 12px;
+}
+
 .text-gray {
-  color: $graycolor;
+  color: $graycolor !important;
+}
+
+.displayNone {
+  display: none;
+}
+
+.inputError {
+  max-width: 314px;
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  color: #e87c03;
+  font-size: 13px;
+  padding: 6px 3px;
+}
+
+.inputErrorBorder {
+  border-bottom: 2px solid #e87c03 !important;
 }
 
 .content-form {
@@ -73,6 +111,8 @@ a {
      border-bottom-left-radius: 2px;
      border-top-left-radius: 2px;
      font-size: 1.3rem;
+     line-height: 50px;
+     padding: 16px 20px 0;
 
      &:focus + label {
       font-size: 13px;
@@ -83,7 +123,7 @@ a {
 
    &-label {
       position: absolute;
-      left: 10px;
+      left: 20px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 1rem;
@@ -130,3 +170,4 @@ a {
    }
   }
 }
+

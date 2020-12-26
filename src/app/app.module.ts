@@ -12,6 +12,7 @@ import { SectionmobileComponent } from './home/sectionmobile/sectionmobile.compo
 import { Sectiontv2Component } from './home/sectiontv2/sectiontv2.component';
 import { SectionfaqComponent } from './home/sectionfaq/sectionfaq.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './home/footer/footer.component';
     SectionmobileComponent,
     Sectiontv2Component,
     SectionfaqComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

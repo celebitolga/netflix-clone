@@ -1,0 +1,227 @@
+$redcolor: #e50914;
+
+.Login {
+  position: relative;
+  height: 110%;
+  background: rgba(0, 0, 0, 0.6) url(https://assets.nflxext.com/ffe/siteui/vlv3/8c4b79f8-dcfa-46a8-a394-805635611b54/67b4a7a3-02b1-44dc-b237-f20691cd8951/TR-tr-20201221-popsignuptwoweeks-perspective_alpha_website_small.jpg) no-repeat center center / cover;
+  background-blend-mode: multiply;
+
+  &-logo {
+    svg {
+      height: 45px;
+      width: 167px;
+      margin-top: 22.5px;
+      margin-left: 3%;
+    }
+
+    path {
+      fill: $redcolor;
+    }
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-content {
+    box-sizing: content-box;
+    min-width: 314px;
+    min-height: 580px;
+    max-height: 660px;
+    padding: 60px 68px 40px;
+    margin-bottom: 90px;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+
+    &-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    &-form {
+
+      &-input {
+        position: relative;
+        display: flex;
+        margin-bottom: 16px;
+
+        input {
+          width: 100%;
+          height: 50px;
+          outline: none;
+          border: none;
+          border-radius: 4px;
+          background-color: #333;
+          line-height: 50px;
+          padding: 16px 20px 0;
+          font-size: 16px;
+          color: white;
+
+          &:focus+label {
+            font-size: 13px;
+            font-weight: 500;
+            top: 12px;
+          }
+        }
+
+        .input-label {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          cursor: text;
+          transition: .2s;
+        }
+
+        .input-show {
+          position: absolute;
+          height: 100%;
+          right: 0;
+          outline: none;
+          border: none;
+          padding: 0 12px;
+          color: #8c8c8c;
+          font-size: 14px;
+          background-color: transparent;
+        }
+      }
+
+      .login-content-form-button {
+        width: 100%;
+        border: none;
+        margin-top: 24px;
+        margin-bottom: 12px;
+        padding: 16px;
+      }
+
+    }
+
+    &-sub {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      &-checkbox {
+
+        input {
+          position: absolute;
+          left: -9999px;
+
+          &:checked+label::after {
+            position: absolute;
+            left: 0;
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(https://www.flaticon.com/svg/static/icons/svg/447/447147.svg);
+            margin-right: 3px;
+
+          }
+        }
+
+        label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #b3b3b3;
+          font-size: 13px;
+          font-weight: 500;
+          user-select: none;
+        }
+
+        label::before {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: #e6e6e6;
+          margin-right: 3px;
+        }
+      }
+
+      &-helplink:hover {
+        text-decoration: underline;
+      }
+    }
+
+
+    &-facebook {
+      display: flex;
+      margin-top: 16px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        background: url(https://www.flaticon.com/svg/static/icons/svg/174/174848.svg);
+      }
+    }
+
+    &-register {
+      max-width: 300px;
+      margin-top: 16px;
+      font-size: 16px;
+    }
+
+    &-robot {
+      max-width: 300px;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+  }
+
+
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .75);
+
+    &-container {
+      padding: 30px 0;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .Footer-title {
+        font-size: 1rem;
+        padding: 0;
+        margin: 0 0 30px;
+      }
+
+      .Footer-links {
+        display: flex;
+        flex-direction: column;
+
+        &-items {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          &-item {
+            font-size: 14px;
+            width: 20%;
+            align-self: start;
+          }
+        }
+      }
+    }
+  }
+}

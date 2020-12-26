@@ -4,7 +4,7 @@ $redcolor: #e50914;
   border-bottom: 8px solid #222;
 
   &-background {
-    background: rgba(0, 0, 0, 0.7) url(../../../assets/img/header.jpg) no-repeat center center / cover;
+    background: rgba(0, 0, 0, 0.7) url(https://assets.nflxext.com/ffe/siteui/vlv3/8c4b79f8-dcfa-46a8-a394-805635611b54/67b4a7a3-02b1-44dc-b237-f20691cd8951/TR-tr-20201221-popsignuptwoweeks-perspective_alpha_website_small.jpg) no-repeat center center / cover;
     background-blend-mode: multiply;
   }
 
@@ -19,7 +19,7 @@ $redcolor: #e50914;
 
     .logo {
       svg {
-        padding-top: 8px;
+        padding-top: 9px;
         height: 45px;
         width: 167px;
       }

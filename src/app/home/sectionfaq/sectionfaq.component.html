@@ -35,9 +35,9 @@
         İzlemeye hazır mısınız? Üyelik oluşturmak veya üyeliğinize erişmek için e‑posta adresinizi girin.
       </h3>
       <div class="content-form-lock">
-        <input id="email" class="content-form-lock-input" type="email">
-        <label for="email" class="content-form-lock-label">E-posta adresi</label>
-        <button class="content-form-lock-button button-red">
+        <input (blur)="inputBlur($event)" id="emailSecond" class="content-form-lock-input" type="email">
+        <label for="emailSecond" class="content-form-lock-label">E-posta adresi</label>
+        <button routerLink="/login"  class="content-form-lock-button button-red">
           <span class="content-form-lock-button-text">İZLEMEYE BAŞLA</span>
           <span class="content-form-lock-button-arrow">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
