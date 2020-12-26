@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -61,6 +64,20 @@ export class LoginComponent implements OnInit {
     console.log(email);
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+  }
+
+  join() {
+    const loginEmail =  (document.getElementById('loginEmail') as HTMLInputElement).value;
+    const loginPassword = (document.getElementById('loginPassword') as HTMLInputElement).value;
+    const displayNone = document.querySelectorAll('#displayNone');
+
+    if(loginEmail == 'admin@admin.com' && loginPassword == 'admin') {
+      this.router.navigate(['browse']);
+    } else {
+      displayNone.forEach(item => {
+        item.setAttribute('class','inputError')
+      })
+    }
   }
 
 }

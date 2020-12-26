@@ -21,7 +21,7 @@
           <input (blur)="isEmailValid($event)" id="loginEmail" type="email">
           <label class="input-label" for="loginEmail">E-posta veya telefon numarası</label>
         </div>
-        <div class="displayNone">
+        <div id="displayNone" class="displayNone">
           Lütfen geçerli bir telefon numarası veya e‑posta adresi girin.
         </div>
         <div class="Login-content-form-input">
@@ -29,11 +29,11 @@
           <label class="input-label" for="loginPassword">Parola</label>
           <button class="input-show" (click)="show($event);$event.preventDefault()">Göster</button>
         </div>
-        <div class="displayNone">
+        <div id="displayNone" class="displayNone">
           Parolanız 4 ila 60 karakter olmalıdır.
         </div>
 
-        <button class="login-content-form-button button-red">
+        <button type="submit" class="login-content-form-button button-red" (click)="join();$event.preventDefault()">
           Oturum Aç
         </button>
 

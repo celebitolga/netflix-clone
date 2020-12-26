@@ -14,6 +14,9 @@ import { SectionfaqComponent } from './home/sectionfaq/sectionfaq.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowseComponent } from './browse/browse.component';
+import { SelectProfileComponent } from './browse/select-profile/select-profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SectionfaqComponent,
     FooterComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BrowseComponent,
+    SelectProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

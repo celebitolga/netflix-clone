@@ -103,6 +103,10 @@ $redcolor: #e50914;
         margin-top: 24px;
         margin-bottom: 12px;
         padding: 16px;
+
+        &:focus {
+          border: 1px solid white;
+        }
       }
 
     }
