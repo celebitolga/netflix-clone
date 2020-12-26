@@ -13,6 +13,7 @@ import { Sectiontv2Component } from './home/sectiontv2/sectiontv2.component';
 import { SectionfaqComponent } from './home/sectionfaq/sectionfaq.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginComponent } from './login/login.component';
     Sectiontv2Component,
     SectionfaqComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
