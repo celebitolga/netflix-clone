@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -72,6 +74,7 @@ export class LoginComponent implements OnInit {
     const displayNone = document.querySelectorAll('#displayNone');
 
     if(loginEmail == 'admin@admin.com' && loginPassword == 'admin') {
+      this.authService.login();
       this.router.navigate(['browse']);
     } else {
       displayNone.forEach(item => {

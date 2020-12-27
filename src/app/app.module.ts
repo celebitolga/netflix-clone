@@ -17,6 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowseComponent } from './browse/browse.component';
 import { SelectProfileComponent } from './browse/select-profile/select-profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatSlideToggleModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

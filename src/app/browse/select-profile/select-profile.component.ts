@@ -17,6 +17,7 @@ export class SelectProfileComponent implements OnInit {
     imageUrl: undefined
   };
   currentTime: any;
+  showPage:boolean;
 
   constructor(
     private postService: PostService
@@ -48,15 +49,17 @@ export class SelectProfileComponent implements OnInit {
 
   checkTime() {
     let currentTime = new Date().getTime();
-    const time = JSON.parse(localStorage.getItem('selectedTime'));
+    const time = JSON.parse(localStorage.getItem('selectedTime')|| '{}');
 
     if((((currentTime - time)/1000)/60) > 60) {
       // 60dk dan fazla olmuşsa yeniden kullanıcı seçecek
       localStorage.removeItem('selectedUser');
       this.selectedUserCheck = false;
+      this.showPage = false;
     } else {
       // 60dk olmadıysa izlemeye edevam edebilecek
       this.selectedUserCheck = true;
+      this.showPage = true;
     }
 
   }
@@ -70,5 +73,7 @@ export class SelectProfileComponent implements OnInit {
     localStorage.setItem('selectedTime', JSON.stringify(this.currentTime.getTime()));
 
     this.selectedUserCheck = true;
+    this.showPage = true;
   }
 }
+
