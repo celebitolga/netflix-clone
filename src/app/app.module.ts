@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
 import { SectiontvComponent } from './home/sectiontv/sectiontv.component';
@@ -19,6 +17,9 @@ import { SelectProfileComponent } from './browse/select-profile/select-profile.c
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
+
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 @NgModule({
   declarations: [
@@ -38,9 +39,8 @@ import { AuthService } from './services/auth.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule
   ],
   providers: [AuthGuard,AuthService],
   bootstrap: [AppComponent]

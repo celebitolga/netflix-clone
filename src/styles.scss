@@ -1,10 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+
 $redcolor: #e50914;
 $graycolor: #757575;
 *{
   box-sizing: border-box;
 }
 html, body {
+  font-size: 16px;
   height: 100%;
 }
 body {
@@ -39,6 +41,14 @@ a {
 
 .text-blue {
   color: #0071eb;
+}
+
+.text-gray2 {
+  color: #e5e5e5;
+}
+
+.text-active {
+  font-weight: 500;
 }
 
 .text-underline:hover {
@@ -171,3 +181,27 @@ a {
   }
 }
 
+
+
+
+
+// .p-carousel-next {
+//   display: none !important;
+// }
+
+
+.foto {
+  width: 150%;
+  height: 200px;
+}
+
+
+
+
+.slick-prev{
+  left: 0 !important;
+}
+
+.slick-cloned {
+
+}
