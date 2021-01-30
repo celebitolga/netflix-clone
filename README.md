@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-The site works only on the computer. Its not responsive
+The site works only on the desktop. Its not responsive
 
 https://celebitolga.github.io/netflix-clone/
 
